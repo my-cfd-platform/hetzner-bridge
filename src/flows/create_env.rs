@@ -129,7 +129,7 @@ pub async fn create_env(
             .server
             .private_net
             .into_iter()
-            .find(|x| x.network == network_result.network.id);
+            .find(|x| x.network == app.settings.main_network_id);
 
         match search_result {
             Some(src) => {
@@ -139,5 +139,4 @@ pub async fn create_env(
             None => continue,
         }
     }
-
 }
