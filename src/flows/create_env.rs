@@ -89,7 +89,7 @@ pub async fn create_vm(
             name,
             HetznerClientPublicNetType::IPv4(None),
             app.settings.default_server_type.clone(),
-            vec![],
+            app.settings.ssh_keys_ids.clone(),
             vec![],
         )
         .await

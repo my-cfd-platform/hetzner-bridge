@@ -10,6 +10,7 @@ pub struct SettingsModel {
     pub hetzner_api_key: String,
     pub telemetry: String,
     pub main_network_id: i64,
+    pub ssh_keys_ids: Vec<String>
 }
 
 #[async_trait::async_trait]
